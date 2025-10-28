@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ | The Etna Rosso Ristorante • Fort Lauderdale Italian Dining</title>
+  <meta name="description" content="Frequently asked questions about reservations, private dining, corkage, large party policies, wine selection, hours, parking and more at The Etna Rosso Ristorante in Fort Lauderdale." />
+  <link rel="canonical" href="https://www.theetnarosso.com/faq/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FAQ | The Etna Rosso Ristorante" />
+  <meta property="og:description" content="Reservations, private dining, corkage, policies, hours & parking — quick answers for your visit to The Etna Rosso." />
+  <meta property="og:url" content="https://www.theetnarosso.com/faq/" />
+  <meta property="og:image" content="https://www.theetnarosso.com/wp-content/uploads/2025/10/The-Etna-Rosso-Italian-Restaurant-Ft-Lauderdale.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #222;
+      --muted: #666;
+      --border: #e7e7e7;
+      --accent: #b11116;
+      --accent-2: #bfa24a;
+      --panel: #faf8f6;
+      --shadow: 0 8px 30px rgba(0,0,0,.06);
+      --radius: 16px;
+      --maxw: 1080px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin: 0 auto;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: brightness(0.55);
+    }
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      padding: 1.5rem;
+      max-width: 600px;
+      color: #fff;
+    }
+    .hero-overlay h1,
+    .hero-overlay p { color: #fff !important; }
+    .hero-overlay h1 { font-size: clamp(26px, 4vw, 40px); margin-bottom: 10px; }
+    .hero-overlay p { line-height: 1.5; max-width: 50ch; }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1rem; }
+    .btn {
+      border: 0; cursor: pointer;
+      text-decoration: none; color: #fff;
+      font-weight: 600; padding: 12px 16px;
+      border-radius: 999px;
+      display: inline-flex; align-items: center; justify-content: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,.15);
+      transition: all 0.2s ease;
+    }
+    .btn.primary { background: var(--accent); }
+    .btn.ghost { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); }
+    .btn:hover { transform: translateY(-2px); }
+
+    @media (max-width: 599px) {
+      .hero { max-height: 220px; min-height: 160px; }
+    }
+    @media (min-width: 600px) and (max-width: 1024px) {
+      .hero { max-height: 260px; min-height: 180px; }
+    }
+    @media (min-width: 1025px) {
+      .hero { max-height: 300px; min-height: 220px; }
+    }
+
+    nav.breadcrumbs { font-size: 14px; color: var(--muted); margin: 18px 0 8px; }
+    nav.breadcrumbs a { color: var(--muted); text-decoration: none; }
+    .pillnav { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 8px; }
+    .pillnav a { text-decoration: none; color: var(--text); border: 1px solid var(--border); padding: 10px 14px; border-radius: 999px; background: #fff; box-shadow: var(--shadow); }
+    .pillnav a:hover { border-color: var(--accent); color: var(--accent); }
+
+    section.faq-section { margin: 18px 0 32px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); scroll-margin-top: 120px; }
+    .section-head { display: flex; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--border); background: var(--panel); border-top-left-radius: var(--radius); border-top-right-radius: var(--radius); }
+    .section-head h2 { margin: 0; font-size: 20px; }
+
+    details.faq { border-top: 1px solid var(--border); padding: 0 20px; }
+    details.faq:first-of-type { border-top: 0; }
+    details.faq summary { cursor: pointer; padding: 18px 0; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; font-weight: 600; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary .q { color: var(--text); }
+    details.faq[open] summary .q { color: var(--accent); }
+    details.faq summary .chev { width: 18px; height: 18px; border: 1.5px solid var(--muted); border-left: 0; border-top: 0; transform: rotate(45deg); transition: transform .2s ease, border-color .2s ease; }
+    details.faq[open] summary .chev { transform: rotate(225deg); border-color: var(--accent); }
+    .answer { padding: 0 0 18px 0; line-height: 1.65; }
+
+    .cta-card { display: grid; gap: 10px; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; background: #fff; box-shadow: var(--shadow); }
+    .cta-card strong { font-size: 18px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .footnote { color: var(--muted); font-size: 14px; margin: 18px 0 40px; }
+
+    #backToTop {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 99;
+    }
+    #backToTop:hover { background: #8d0e13; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="/">Home</a> › FAQ</nav>
+
+    <header class="hero">
+      <img class="hero-bg" src="https://www.theetnarosso.com/wp-content/uploads/2025/10/The-Etna-Rosso-Italian-Restaurant-Ft-Lauderdale.jpg" alt="The Etna Rosso Interior">
+      <div class="hero-overlay">
+        <h1>Frequently Asked Questions</h1>
+        <p>We’ve gathered the most common questions guests ask when booking a table at <strong>The Etna Rosso</strong>. Click below to reveal answers.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://www.opentable.com/restref/client/?rid=XXXXX" target="_blank">Reserve on OpenTable</a>
+          <a class="btn ghost" href="/private-dining/">Plan a Private Event</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="pillnav">
+      <a href="#reservations">Reservations</a>
+      <a href="#policies">Policies & Large Parties</a>
+      <a href="#wine">Wine & Corkage</a>
+      <a href="#general">General Info</a>
+    </nav>
+
+    <section id="reservations" class="faq-section">
+      <div class="section-head"><h2>Reservations</h2><span class="muted">Booking, walk-ins, late arrivals</span></div>
+      <details class="faq"><summary><span class="q">Do you accept walk-ins?</span><span class="chev"></span></summary><div class="answer"><p>Yes, we accept walk-ins, but reservations are highly recommended to ensure availability.</p></div></details>
+      <details class="faq"><summary><span class="q">How can I make a reservation?</span><span class="chev"></span></summary><div class="answer"><p>You can make a reservation through OpenTable by clicking the “Reserve Now” button on this page.</p></div></details>
+    </section>
+
+    <section id="policies" class="faq-section">
+      <div class="section-head"><h2>Policies & Large Parties</h2><span class="muted">Groups, cancellation, minimums</span></div>
+      <details class="faq"><summary><span class="q">Reservations & Dining Policy for Parties of 6 to 9 Guests</span><span class="chev"></span></summary><div class="answer"><p>For parties of 6 to 9 guests, a minimum spend of $80 per person is required, including meal, tax, and gratuity. Cancellation must be at least 2 days in advance. Credit card holds of $35 per guest apply. Late cancellations or no-shows are subject to fees.</p></div></details>
+    </section>
+
+    <section id="wine" class="faq-section">
+      <div class="section-head"><h2>Wine & Corkage</h2><span class="muted">Wine list, corkage fee, policy</span></div>
+      <details class="faq"><summary><span class="q">Can I bring my own wine?</span><span class="chev"></span></summary><div class="answer"><p>We welcome outside bottles Tuesday through Thursday. Corkage Fee: $35 per 750ml, $46 per 1L. No outside bottles on Fridays or Saturdays.</p></div></details>
+    </section>
+
+    <section id="general" class="faq-section">
+      <div class="section-head"><h2>General Info</h2><span class="muted">Hours, parking, support</span></div>
+      <details class="faq"><summary><span class="q">What are your opening hours?</span><span class="chev"></span></summary><div class="answer"><p>Kitchen Hours:<br>• Tue–Thu: 5:00 PM – 9:00 PM<br>• Fri & Sat: 5:00 PM – 10:00 PM<br>The restaurant remains open after the kitchen closes for seated guests.</p></div></details>
+    </section>
+
+    <div class="grid-2">
+      <div class="cta-card">
+        <strong>Ready to dine with us?</strong>
+        <span class="muted">Reserve your table in seconds.</span>
+        <div><a class="btn primary" href="https://www.opentable.com/restref/client/?rid=XXXXX" target="_blank">Reserve on OpenTable</a></div>
+      </div>
+      <div class="cta-card">
+        <strong>Planning a celebration?</strong>
+        <span class="muted">Tell us about your event — we’ll tailor the menu & space.</span>
+        <div><a class="btn" style="background:var(--accent-2); color:#1a1a1a" href="/private-dining/">Plan a Private Event</a></div>
+      </div>
+    </div>
+
+    <p class="footnote">Questions not covered here? Text or call <a href="tel:+19545307910">(954) 530-7910</a> or <a href="/contact/">contact us</a>.</p>
+  </div>
+
+  <button id="backToTop" aria-label="Back to Top">↑</button>
+
+  <script>
+    const topBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    });
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
