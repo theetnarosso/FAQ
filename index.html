@@ -7,7 +7,7 @@
   <meta name="description" content="Frequently asked questions about reservations, private dining, corkage, large party policies, wine selection, hours, parking and more at The Etna Rosso Ristorante in Fort Lauderdale." />
   <link rel="canonical" href="https://www.theetnarosso.com/faq/" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Social meta (optional but helpful for sharing) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="FAQ | The Etna Rosso Ristorante" />
   <meta property="og:description" content="Reservations, private dining, corkage, policies, hours & parking — quick answers for your visit to The Etna Rosso." />
@@ -29,14 +29,10 @@
       --maxw: 1080px;
     }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: var(--bg);
-      color: var(--text);
-    }
+    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: var(--bg); color: var(--text); }
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
+    /* Hero */
     .hero {
       position: relative;
       display: flex;
@@ -45,95 +41,73 @@
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow);
-      margin: 0 auto;
+      margin: 0 auto 14px;
+      max-height: 340px;              /* keeps image from overtaking the page */
+      min-height: 220px;
     }
     .hero-bg {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       filter: brightness(0.55);
     }
     .hero-overlay {
       position: relative;
       z-index: 2;
-      padding: 1.5rem;
-      max-width: 600px;
+      padding: clamp(16px, 4vw, 28px);
+      max-width: 640px;
       color: #fff;
     }
     .hero-overlay h1,
-    .hero-overlay p { color: #fff !important; }
-    .hero-overlay h1 { font-size: clamp(26px, 4vw, 40px); margin-bottom: 10px; }
-    .hero-overlay p { line-height: 1.5; max-width: 50ch; }
-
-    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1rem; }
-    .btn {
-      border: 0; cursor: pointer;
-      text-decoration: none; color: #fff;
-      font-weight: 600; padding: 12px 16px;
+    .hero-overlay p { color: #fff !important; margin: 0 0 8px; }
+    .hero-cta {
+      margin-top: 12px;
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 18px;
       border-radius: 999px;
-      display: inline-flex; align-items: center; justify-content: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,.15);
-      transition: all 0.2s ease;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     }
-    .btn.primary { background: var(--accent); }
-    .btn.ghost { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); }
-    .btn:hover { transform: translateY(-2px); }
+    .hero-cta:hover { background: #8d0e13; }
 
-    @media (max-width: 599px) {
-      .hero { max-height: 220px; min-height: 160px; }
-    }
-    @media (min-width: 600px) and (max-width: 1024px) {
-      .hero { max-height: 260px; min-height: 180px; }
-    }
-    @media (min-width: 1025px) {
-      .hero { max-height: 300px; min-height: 220px; }
-    }
-
+    /* Breadcrumbs & category pills */
     nav.breadcrumbs { font-size: 14px; color: var(--muted); margin: 18px 0 8px; }
     nav.breadcrumbs a { color: var(--muted); text-decoration: none; }
-    .pillnav { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 8px; }
+    .pillnav { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 8px; }
     .pillnav a { text-decoration: none; color: var(--text); border: 1px solid var(--border); padding: 10px 14px; border-radius: 999px; background: #fff; box-shadow: var(--shadow); }
     .pillnav a:hover { border-color: var(--accent); color: var(--accent); }
 
-    section.faq-section { margin: 18px 0 32px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); scroll-margin-top: 120px; }
-    .section-head { display: flex; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--border); background: var(--panel); border-top-left-radius: var(--radius); border-top-right-radius: var(--radius); }
+    /* Sections & accordion */
+    section.faq-section { margin: 18px 0 28px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); scroll-margin-top: 120px; }
+    .section-head { display: flex; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--panel); border-top-left-radius: var(--radius); border-top-right-radius: var(--radius); }
     .section-head h2 { margin: 0; font-size: 20px; }
-
     details.faq { border-top: 1px solid var(--border); padding: 0 20px; }
     details.faq:first-of-type { border-top: 0; }
-    details.faq summary { cursor: pointer; padding: 18px 0; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; font-weight: 600; }
+    details.faq summary { cursor: pointer; padding: 16px 0; font-weight: 600; display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; }
     details.faq summary::-webkit-details-marker { display: none; }
-    details.faq summary .q { color: var(--text); }
-    details.faq[open] summary .q { color: var(--accent); }
-    details.faq summary .chev { width: 18px; height: 18px; border: 1.5px solid var(--muted); border-left: 0; border-top: 0; transform: rotate(45deg); transition: transform .2s ease, border-color .2s ease; }
-    details.faq[open] summary .chev { transform: rotate(225deg); border-color: var(--accent); }
-    .answer { padding: 0 0 18px 0; line-height: 1.65; }
+    .answer { padding: 0 0 16px; line-height: 1.7; }
+    .answer a { color: var(--accent); text-decoration: none; }
+    .answer a:hover { text-decoration: underline; }
 
-    .cta-card { display: grid; gap: 10px; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; background: #fff; box-shadow: var(--shadow); }
-    .cta-card strong { font-size: 18px; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    @media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; } }
-
-    .footnote { color: var(--muted); font-size: 14px; margin: 18px 0 40px; }
-
+    /* Back to top button */
     #backToTop {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      display: none;
-      z-index: 99;
+      position: fixed; bottom: 22px; right: 22px;
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 50%; width: 48px; height: 48px;
+      font-size: 18px; cursor: pointer; display: none; z-index: 99;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
-    #backToTop:hover { background: #8d0e13; }
+
+    /* Mobile tweaks */
+    @media (max-width: 640px) {
+      .hero { max-height: 300px; }
+      .hero-overlay { max-width: 92%; }
+    }
   </style>
 </head>
 <body>
@@ -144,72 +118,168 @@
       <img class="hero-bg" src="https://www.theetnarosso.com/wp-content/uploads/2025/10/The-Etna-Rosso-Italian-Restaurant-Ft-Lauderdale.jpg" alt="The Etna Rosso Interior">
       <div class="hero-overlay">
         <h1>Frequently Asked Questions</h1>
-        <p>We’ve gathered the most common questions guests ask when booking a table at <strong>The Etna Rosso</strong>. Click below to reveal answers.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="https://www.opentable.com/restref/client/?rid=XXXXX" target="_blank">Reserve on OpenTable</a>
-          <a class="btn ghost" href="/private-dining/">Plan a Private Event</a>
-        </div>
+        <p>Quick answers about reservations, private dining, corkage, hours, parking, family policies and more at <strong>The Etna Rosso</strong>.</p>
+        <a class="hero-cta" href="https://www.opentable.com/booking/restref/availability?lang=en-US&correlationId=9d70b814-0def-477c-b0a3-980db371e71f&restRef=548143&otSource=Restaurant%20website" target="_blank" rel="noopener">Reserve on OpenTable</a>
       </div>
     </header>
 
-    <nav class="pillnav">
+    <nav class="pillnav" aria-label="FAQ categories">
       <a href="#reservations">Reservations</a>
       <a href="#policies">Policies & Large Parties</a>
       <a href="#wine">Wine & Corkage</a>
       <a href="#general">General Info</a>
     </nav>
 
+    <!-- Reservations -->
     <section id="reservations" class="faq-section">
-      <div class="section-head"><h2>Reservations</h2><span class="muted">Booking, walk-ins, late arrivals</span></div>
-      <details class="faq"><summary><span class="q">Do you accept walk-ins?</span><span class="chev"></span></summary><div class="answer"><p>Yes, we accept walk-ins, but reservations are highly recommended to ensure availability.</p></div></details>
-      <details class="faq"><summary><span class="q">How can I make a reservation?</span><span class="chev"></span></summary><div class="answer"><p>You can make a reservation through OpenTable by clicking the “Reserve Now” button on this page.</p></div></details>
+      <div class="section-head"><h2>Reservations</h2></div>
+      <details class="faq">
+        <summary><span class="q">Do you accept walk-ins?</span></summary>
+        <div class="answer"><p>Yes, we do accept walk-ins, but reservations are highly recommended to ensure availability.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">How can I make a reservation?</span></summary>
+        <div class="answer"><p>You can make a reservation through OpenTable by clicking the “Reserve Now” button on this page.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">What time does The Etna Rosso close?</span></summary>
+        <div class="answer"><p>While our kitchen closes at <strong>9:00 PM on weekdays</strong> and <strong>10:00 PM on Fridays and Saturdays</strong>, the restaurant remains open as long as guests are still seated and enjoying their evening.</p><p>After the kitchen closes, you’re still welcome to order desserts, coffee, wine, and other beverages.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">What is your Late Arrival Policy?</span></summary>
+        <div class="answer"><p>You may lose your table after a 15-minute delay. Even if you let us know in advance that you are running late, we may not be able to seat your party. Every reservation has a time slot on the schedule and we may not have a table in a different time frame available.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Best way to cancel a reservation</span></summary>
+        <div class="answer"><p>Reservations can be canceled via the link in your confirmation email or text. If you don't have access to your confirmation, please text us at <a href="tel:+19545307910">(954) 530-7910</a> with the <em>name and phone number on the reservation</em>.</p></div>
+      </details>
     </section>
 
-    <section id="policies" class="faq-section">
-      <div class="section-head"><h2>Policies & Large Parties</h2><span class="muted">Groups, cancellation, minimums</span></div>
-      <details class="faq"><summary><span class="q">Reservations & Dining Policy for Parties of 6 to 9 Guests</span><span class="chev"></span></summary><div class="answer"><p>For parties of 6 to 9 guests, a minimum spend of $80 per person is required, including meal, tax, and gratuity. Cancellation must be at least 2 days in advance. Credit card holds of $35 per guest apply. Late cancellations or no-shows are subject to fees.</p></div></details>
-    </section>
-
+    <!-- Wine & Corkage -->
     <section id="wine" class="faq-section">
-      <div class="section-head"><h2>Wine & Corkage</h2><span class="muted">Wine list, corkage fee, policy</span></div>
-      <details class="faq"><summary><span class="q">Can I bring my own wine?</span><span class="chev"></span></summary><div class="answer"><p>We welcome outside bottles Tuesday through Thursday. Corkage Fee: $35 per 750ml, $46 per 1L. No outside bottles on Fridays or Saturdays.</p></div></details>
+      <div class="section-head"><h2>Wine & Corkage</h2></div>
+      <details class="faq">
+        <summary><span class="q">Do you offer alcoholic beverages?</span></summary>
+        <div class="answer"><p>Yes, we offer a wide variety of wines, including a red selection of special wines like Tignanello, Sassicaia, Solaia, Caymus, Far Niente and many more.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Do you serve cocktails?</span></summary>
+        <div class="answer"><p>No, we only serve wine and beer.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Can I bring a special bottle of wine?</span></summary>
+        <div class="answer">
+          <p>We welcome outside bottles Tuesday through Thursday.</p>
+          <ul>
+            <li><strong>Corkage Fee:</strong> $35 per 750ml, $46 per 1L</li>
+            <li><strong>Limit:</strong> One bottle per reservation (not per guest or per seating)</li>
+            <li><strong>Important:</strong> No outside bottles on Fridays or Saturdays</li>
+          </ul>
+        </div>
+      </details>
     </section>
 
+    <!-- Policies & Large Parties -->
+    <section id="policies" class="faq-section">
+      <div class="section-head"><h2>Policies & Large Parties</h2></div>
+      <details class="faq">
+        <summary><span class="q">Reservations & Dining Policy for Parties of 6 to 9 Guests</span></summary>
+        <div class="answer">
+          <p>At <em>The Etna Rosso</em>, we’re honored to welcome your party. Given our intimate setting (about 30 indoor seats), please review the following:</p>
+          <ol>
+            <li><strong>Minimum Spend:</strong> $80 per person (includes meal, 7% tax, 20% gratuity).</li>
+            <li><strong>Cancellation:</strong> At least 2 days in advance, by 5:30 PM before your reservation date.</li>
+            <li><strong>How to Cancel:</strong> Through OpenTable, via text <a href="tel:+19545307910">(954) 530-7910</a>, or in person (no voicemail/email cancellations).</li>
+            <li><strong>No-Show / Late Cancellation Fee:</strong> $35 per guest if not canceled per policy; charged 15 minutes after the reservation time or later that evening.</li>
+            <li><strong>Changes to Party Size:</strong> $35 charge per missing guest unless updated 48 hours in advance.</li>
+            <li><strong>Reservation Timing:</strong> Large groups available only before 5:45 PM or after 8:15 PM.</li>
+            <li><strong>Credit Card Hold:</strong> $35 hold per guest required to secure the reservation.</li>
+            <li><strong>Why These Policies:</strong> Our limited capacity requires careful planning to maintain service quality.</li>
+            <li><strong>Additional Note:</strong> No minimum spend for tables up to 5 guests.</li>
+          </ol>
+        </div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Can you seat more than six guests during peak hours?</span></summary>
+        <div class="answer"><p>During the winter season, we can only accommodate reservations for groups larger than six before 5:45 PM or after 8:15 PM on weekends.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Is there a dress code?</span></summary>
+        <div class="answer"><p>Our dress code is smart casual. We appreciate our guests dressing appropriately.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Can I ensure that I am the only one who pays the check for my party?</span></summary>
+        <div class="answer"><p>Yes. Give us your card and preferred tip percentage at the beginning of your meal, and we’ll process payment discreetly at your signal.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Do you offer private dining or event reservations?</span></summary>
+        <div class="answer"><p>Yes. Please contact us in person or visit the <a href="https://www.theetnarosso.com/private-dining/">private dining page</a> for more details.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Are children welcome?</span></summary>
+        <div class="answer"><p>We don't offer a kids' menu, but we offer 30% off any homemade pasta dish for children 12 and under. Please note we have a limited number of high chairs.</p></div>
+      </details>
+    </section>
+
+    <!-- General Info -->
     <section id="general" class="faq-section">
-      <div class="section-head"><h2>General Info</h2><span class="muted">Hours, parking, support</span></div>
-      <details class="faq"><summary><span class="q">What are your opening hours?</span><span class="chev"></span></summary><div class="answer"><p>Kitchen Hours:<br>• Tue–Thu: 5:00 PM – 9:00 PM<br>• Fri & Sat: 5:00 PM – 10:00 PM<br>The restaurant remains open after the kitchen closes for seated guests.</p></div></details>
+      <div class="section-head"><h2>General Info</h2></div>
+      <details class="faq">
+        <summary><span class="q">What are your opening hours?</span></summary>
+        <div class="answer">
+          <p><strong>Kitchen Hours</strong><br>
+            • Tuesday to Thursday: 5:00 PM – 9:00 PM<br>
+            • Friday & Saturday: 5:00 PM – 10:00 PM
+          </p>
+          <p>The restaurant remains open after the kitchen closes to accommodate guests who are already seated and enjoying their evening.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">How far in advance can I book a table?</span></summary>
+        <div class="answer"><p>Reservations can be made up to 21 days in advance. To book further ahead, please visit us in person.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">What is your cancellation policy?</span></summary>
+        <div class="answer">
+          <p><strong>1–5 guests:</strong> cancel up to 24 hours before the reservation time.</p>
+          <p><strong>6+ guests:</strong> a non-refundable $35 per guest will apply if the reservation is not canceled at least 5 days before the reservation date.</p>
+        </div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Do you accommodate dietary restrictions?</span></summary>
+        <div class="answer"><p>Yes, we accommodate most dietary restrictions. Please inform us when making your reservation, and remind your waiter while placing the order.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">Parking available?</span></summary>
+        <div class="answer"><p>Street parking is available. You can also park next door where Galt Realty allows our customers to park after 5:00 PM until 11:00 PM. More free parking is available after 6:00 PM on Galt Ocean Dr in the back.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">If the system shows “no availability”</span></summary>
+        <div class="answer"><p>If we receive cancellations or there is a no-show, you can get notified directly by our reservation system. Don’t hesitate to text us at <a href="tel:+19545307910">(954) 530-7910</a> as we may be able to accommodate you due to a cancellation or a glitch in the online system.</p></div>
+      </details>
+      <details class="faq">
+        <summary><span class="q">How can I show my support for The Etna Rosso?</span></summary>
+        <div class="answer">
+          <p>✅ Give us your honest feedback<br>
+             ✅ Follow us on social media & share our posts<br>
+             ✅ Post pics with #TheEtnaRossoRistorante<br>
+             ✅ Write a constructive review<br>
+             ✅ Purchase a gift card for friends & family<br>
+             ✅ Sign up for our mailing list
+          </p>
+        </div>
+      </details>
     </section>
 
-    <div class="grid-2">
-      <div class="cta-card">
-        <strong>Ready to dine with us?</strong>
-        <span class="muted">Reserve your table in seconds.</span>
-        <div><a class="btn primary" href="https://www.opentable.com/restref/client/?rid=XXXXX" target="_blank">Reserve on OpenTable</a></div>
-      </div>
-      <div class="cta-card">
-        <strong>Planning a celebration?</strong>
-        <span class="muted">Tell us about your event — we’ll tailor the menu & space.</span>
-        <div><a class="btn" style="background:var(--accent-2); color:#1a1a1a" href="/private-dining/">Plan a Private Event</a></div>
-      </div>
-    </div>
-
-    <p class="footnote">Questions not covered here? Text or call <a href="tel:+19545307910">(954) 530-7910</a> or <a href="/contact/">contact us</a>.</p>
   </div>
 
   <button id="backToTop" aria-label="Back to Top">↑</button>
-
   <script>
-    const topBtn = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
-      }
+    const topBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
-    topBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>
